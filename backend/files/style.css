@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 50px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.button {
+    display: inline;
+}
+
+form>div {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+input, button, textarea {
+    padding: 0.5rem;
+}
+.err {
+    background: #fee;
+    color: #873A3A;
+    padding: 1.5rem;
+}
+.ok {
+    background: #efe;
+    color: #115F17;
+    padding: 1.5rem;
+}
+
+ul.hr {
+     margin: 0; /* Обнуляем значение отступов */
+     padding: 4px; /* Значение полей */
+}
+
+ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+}
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}

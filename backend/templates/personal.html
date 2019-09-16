@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>сabinet</title>
+    <link href="/files/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>{{template "header"}}</header>
+
+    <h2>Kabinet</h2>
+    <div>LOGIN: {{.u.Login}}</div>
+    <div>AGE: {{.u.Age}}</div>
+    <div><button><a href="personal/update">Edit</a></button></div>
+    <h2>Feedbacks:</h2>
+    <table>
+        {{if .fb}}
+        <tr>
+            <th>Id</th>
+            <th>Topic</th>
+            <th>Message</th>
+            <th>Set</th>
+        </tr>
+         {{range .fb}}
+            <tr>
+                <th>{{.Id}}</th>
+                <td>{{.Title}}</td>
+                <td>{{.Message}}</td>
+                <td>{{.Set}}</td>
+            </tr>
+        {{end}} {{else}}
+            <tr>
+                <td colspan=3>Нет записей</td>
+            </tr>
+        {{end}}
+    </table>
+</div>
+</body>
+</html>

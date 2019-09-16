@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{if .ok}}
+        <meta http-equiv="refresh" content="1; url=/u/personal">
+    {{end}}
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<div class="container">
+    <h2>Update</h2>
+    <form method="post">
+        <div>
+            <input placeholder="age" type="text" name="age" required="required">
+        </div>
+        <div>
+            <input type="submit" value="Send!">
+            <button><a href="/u/personal">Back</a></button>
+        </div>
+    </form>
+    {{if .ok}}
+        <div class="ok">
+            {{.ok}}
+        </div>
+    {{end}} {{if .err}}
+        <div class="err">
+            {{.err}}
+        </div>
+    {{end}}
+</div>
+</body>
+</html>

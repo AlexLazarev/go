@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>{{.title}}</title>
+    <link href="/files/style.css" rel="stylesheet">
+</head>
+
+<header>{{template "header"}}</header>
+<body>
+<div class="container">
+    <h2>Give feedback</h2>
+    <form method="post">
+        <div>
+            <input placeholder="тема" type="text" name="title" required="required">
+        </div>
+        <div>
+            <textarea placeholder="message" rows="5" cols="30" name="message" required="required"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Send!">
+        </div>
+    </form>
+    {{if .ok}}
+        <div class="ok">
+            {{.ok}}
+        </div>
+    {{end}} {{if .err}}
+        <div class="err">
+            {{.err}}
+        </div>
+    {{end}}
+</div>
+</body>
+
+</html>

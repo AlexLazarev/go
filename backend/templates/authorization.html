@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{if .ok}}
+        <meta http-equiv="refresh" content="1; url=/u/personal">
+    {{end}}
+    <meta charset="UTF-8">
+    <title>authorization</title>
+    <link href="/files/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2>Authorization</h2>
+    <div class="button">
+        <form method="post">
+            <div>
+                <input placeholder="login" type="text" name="login" required="required">
+            </div>
+            <div>
+                <input placeholder="pass" type="password" name="pass" required="required">
+            </div>
+            <div>
+                <input type="submit" value="Sign in!">
+            </div>
+        </form>
+        <button><a href="/registration">Sign up</a></button>
+    </div>
+    {{if .ok}}
+        <div class="ok">
+            {{.ok}}
+        </div>
+    {{end}} {{if .err}}
+        <div class="err">
+            {{.err}}
+        </div>
+    {{end}}
+</div>
+</body>
+</html>
